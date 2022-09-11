@@ -1,0 +1,30 @@
+.menu a{
+	color: red;
+}
+a {
+	color: blueviolet;
+}
+span{
+	color: yellowgreen;
+}
+.watch {
+	color: burlywood;
+}
+
+.watch-ultra p{
+	color: pink;
+}
+h1{
+	color: rgba(26, 7, 7, 0.664);
+}
+.airpods h2 ~ p {
+color: red;
+}
+
+.phones,
+.phones-pro {
+	color: brown;
+}
+
+.phones-pro h2{
+	color: goldenrod;}
