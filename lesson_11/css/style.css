@@ -186,6 +186,7 @@
 }
 
 .car__wing {
+	position: absolute;
 	width: 200px;
 	height: 200px;
 	border: 1px solid rgb(22, 22, 22);
@@ -215,13 +216,13 @@
 
 .car__wing--left {
 	position: relative;
-	top: 230px;
+	top: 120px;
 	left: 68px;
 }
 
 .car__wing--right {
 	position: relative;
-	top: 30px;
+	bottom: 80px;
 	left: 518px;
 }
 
