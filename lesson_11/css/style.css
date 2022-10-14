@@ -9,7 +9,7 @@
 	font-size: 16px;
 	line-height: 1.6;
 	min-height: 100%;
-	background-color: #424551;
+	background: url('../img/01.webp') center/cover no-repeat;
 	overflow: hidden;
 	position: relative;
 }
@@ -17,8 +17,8 @@
 
 
 .car {
-	padding: 400px 0px 0px 0px;
-	
+	padding: 550px 0px 0px 0px;
+	margin: 0px 0px 200px 0px;
 }
 
 .car__container {
@@ -87,6 +87,36 @@
 	left: 0px;
 	z-index: 2;
 }
+.car__door{
+	background-color: rgb(22, 22, 22);
+	width: 170px;
+	height: 15px;
+	position: absolute;
+	top: 90px;
+	left: 150px;
+	border-radius: 2px;
+	z-index: 15;
+	top: 170px;
+	left: 550px;
+}
+.car__door::after{
+	content: "";
+	display: block;
+	border: 1px solid #c0c0c0;
+	width: 150px;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+}
+.car__door::before{
+	content: "";
+	display: block;
+	border: 1px solid #c0c0c0;
+	width: 150px;
+	position: absolute;
+	top: 10px;
+	left:5px;
+}
 .car__rul{
 	border: 5px solid #000;
 	width: 0px;
@@ -109,12 +139,15 @@
 	top: -15px;
 	right: 47px;
 }
+
+/* ==============================chairs========================================== */
+
 .car__armchair{
 	width: 15px;
 	background-color: #000;
-	height: 60px;
+	height: 70px;
 	position: absolute;
-	top: 85px;
+	top: 75px;
 	left: 250px;
 	border-radius: 4px 4px 0 0 ;
 }
@@ -125,11 +158,155 @@
 	background-color: #000;
 	height: 40px;
 	position: absolute;
-	bottom: 40px;
+	bottom: 70px;
 	left: 2.48px;
 	border-radius: 5px 5px 0 0;
 }
-  .car__bumper {
+
+.car__armchair-bottom{
+	width: 15px;
+	background-color: #000;
+	height: 50px;
+	position: absolute;
+	top: 95px;
+	left: 225px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__armchair-bottom::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 20px;
+	position: absolute;
+	bottom: 50px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--top {
+	width: 15px;
+	background-color: #000;
+	height: 70px;
+	position: absolute;
+	top: 75px;
+	left: 520px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__chair--top::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 40px;
+	position: absolute;
+	bottom: 70px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--midle {
+	width: 15px;
+	background-color: #000;
+	height: 60px;
+	position: absolute;
+	top: 85px;
+	left: 510px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__chair--midle::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 30px;
+	position: absolute;
+	bottom: 60px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--bottom {
+	width: 15px;
+	background-color: #000;
+	height: 50px;
+	position: absolute;
+	top: 95px;
+	left: 500px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__chair--bottom::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 20px;
+	position: absolute;
+	bottom: 50px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--top-donw {
+	width: 15px;
+	background-color: #000;
+	height: 70px;
+	position: absolute;
+	top: 75px;
+	left: 720px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__chair--top-donw::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 40px;
+	position: absolute;
+	bottom: 70px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--midle-down {
+	width: 15px;
+	background-color: #000;
+	height: 60px;
+	position: absolute;
+	top: 85px;
+	left: 710px;
+	border-radius: 4px 4px 0 0 
+}
+.car__chair--midle-down::before {
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 30px;
+	position: absolute;
+	bottom: 60px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+.car__chair--bottom-down {
+	width: 15px;
+	background-color: #000;
+	height: 50px;
+	position: absolute;
+	top: 95px;
+	left: 700px;
+	border-radius: 4px 4px 0 0 ;
+}
+.car__chair--bottom-down::before{
+	content: "";
+	display: block;
+	width: 10px;
+	background-color: #000;
+	height: 20px;
+	position: absolute;
+	bottom: 50px;
+	left: 2.48px;
+	border-radius: 5px 5px 0 0;
+}
+
+/* ============================================================================ */
+
+.car__bumper {
 	width: 50px;
 
 	border: 2px solid rgba(177, 177, 177, 0.575);
@@ -183,18 +360,40 @@
 	border-radius: 0 10px 10px 0;  
 	bottom: -10px;
 	left: 890px;
-	z-index: 5;
+
 	background-color: black;
 } 
 .car__antenna{
 	width: 5px;
-	height: 30px;
+	height: 15px;
 	position: absolute;
-	border-radius: 0 10px 10px 0;  
-	bottom: 300px;
+	border-radius: 10px 10px 0px 0;
+	bottom: 295px;
 	left: 890px;
-	z-index: 5;
 	background-color: black;
+	transform: rotate(45deg);
+}
+.car__antenna::after{
+	content: "";
+	display: block;
+	width: 3px;
+	height: 40px;
+	position: absolute;
+	border-radius: 10px 10px 0px 0;  
+	bottom: 15px;
+	left: 1px;
+	background-color: black;
+	transform: rotate(0deg);
+}
+.car__bak{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 3px solid rgb(22, 22, 22);
+	left: 880px;
+	bottom: 60px;
+	z-index: 15;
 }
 /* ================windows================================= */
 
@@ -202,6 +401,8 @@
 .car__window{
 	background-color: rgba(25, 212, 203, 0.315);
 	z-index: 5;
+	position: relative;
+	transition: all 1s ease 0s;
 }
 
 .car__wondow--left {
@@ -210,7 +411,7 @@
 	position: absolute;
 	bottom: 140px;
 	left: 0px;
-	border: 5px solid #000;
+
 }
 
 .car__wondow--right {
@@ -219,7 +420,7 @@
 	position: absolute;
 	bottom: 140px;
 	left: 300px;
-	border: 5px solid #000;
+
 }
 
 .car__wondow--donw {
@@ -228,7 +429,66 @@
 	position: absolute;
 	bottom: 140px;
 	left: 550px;
-	border: 5px solid #000;
+
+}
+.car__img{
+	width: 245px;
+	height: 155px;
+	background: url('../img/02.jpg') center/cover no-repeat;
+	position: absolute;
+	left: 300px;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+}
+/* =============================frames===================================== */
+
+.car__frames {
+	
+}
+
+.car__frame {
+	position: relative;
+	z-index: 6;
+}
+.car__frame--front{
+	width: 64px;
+	position: absolute;
+	bottom: 140px;
+	left: 36px;
+	border: 7px solid #000;
+	height: 79px;
+	border-radius: 100% 0% 100% 0% / 50% 100% 0% 50%;
+}
+
+.car__frame--left {
+	width: 195px;
+	position: absolute;
+	bottom: 140px;
+	left: 105px;
+	border: 7px solid #000;
+	height: 150px;
+	border-radius: 100% 0% 100% 0% / 50% 100% 0% 50%;
+}
+
+.car__frame--right {
+	width: 250px;
+	position: absolute;
+	bottom: 140px;
+	left: 300px;
+	border: 7px solid #000;
+	height: 150px;
+}
+
+.car__frame--down {
+	width: 240px;
+	position: absolute;
+	bottom: 140px;
+	left: 550px;
+	border: 7px solid #000;
+	height: 150px;
+	border-radius: 0 40px 0 0;
 }
 
 /* ==============================handle================================= */
@@ -305,7 +565,9 @@
 
 
 /* ===============================wheels======================================= */
-
+.car__wheels{
+	position: absolute;
+}
 .car__wheel {
 	width: 150px;
 	height: 150px;
@@ -364,7 +626,7 @@
 	transform: rotate(60deg);
 	top:-2px;
 	width: 10px;
-	height: 140px;
+	height: 138px;
 	background-color: rgb(212, 208, 208);
 }
 .car__disk::before{
@@ -374,7 +636,7 @@
 	transform: rotate(120deg);
 	top:2px;
 	width: 10px;
-	height: 140px;
+	height: 138px;
 	background-color: rgb(212, 208, 208);
 }
 .car__bolt {
@@ -432,4 +694,188 @@
 	left: 82px;
 } 
 
+/* =================================lights================================ */
+
+.car__lights {
+	position: relative;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.car__light {}
+
+.car__light--1 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid yellow;
+	position: absolute;
+	transform: rotate(60deg);
+	bottom: 10px;
+	left: 160px;
+}
+.car__light--1::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid yellow;
+	position: absolute;
+	bottom: -50px;
+	left: 0px;
+}
+
+.car__light--2 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid yellow;
+	position: absolute;
+	transform: rotate(90deg);
+	bottom: 27px;
+	left: 155px;
+}
+.car__light--2::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid yellow;
+	position: absolute;
+	bottom: -50px;
+	left: 0px;
+}
+.car__light--3 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid yellow;
+	position: absolute;
+	transform: rotate(120deg);
+	bottom: 45px;
+	left: 160px;
+}
+.car__light--3::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid yellow;
+	position: absolute;
+	bottom: -50px;
+	left: 0px;
+}
+
+.car__light--4 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	transform: rotate(120deg);
+	bottom: 25px;
+	left: 1030px;
+}
+.car__light--4::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid red;
+	position: absolute;
+	bottom: 70px;
+	left: -2px;
+}
+
+.car__light--5 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	transform: rotate(90deg);
+	bottom: 45px;
+	left: 1035px;
+}
+.car__light--5::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid red;
+	position: absolute;
+	bottom: 70px;
+	left: 0px;
+}
+
+.car__light--6 {
+	width: 1px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	transform: rotate(240deg);
+	bottom: 65px;
+	left: 1030px;
+}
+.car__light--6::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 30px;
+	border: 1px solid red;
+	position: absolute;
+	bottom: -55px;
+	left: 0px;
+}
+
 /* ====================================================================== */
+.car__button{
+position: relative;
+}
+.button:hover .car__lights{
+	visibility: visible;
+	opacity: 1;
+	animation: light 2s linear infinite;
+}
+.button:hover .car__wheels>.car__wheel{
+	animation: go 2s linear infinite ;
+}
+.button:hover .car__body .car__windows > .car__wondow--right{
+	transition: all 3s ease 0s;
+	transform: translate(100%);
+}
+.button:hover .car__body .car__windows > .car__img{
+	transition: all 2s ease 0s;
+	visibility: visible;
+	opacity: 1;
+}
+
+@keyframes go {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes light {
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+
+/* ================================================================== */
+
+
+.footer {}
+
+.footer__container {
+	text-align: center;
+}
+
+.footer__text {
+	font-size: 50px;
+	font-weight: 700;
+}
