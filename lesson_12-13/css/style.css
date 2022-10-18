@@ -5,431 +5,133 @@
 	
 }
 .wrapper{	
-	font-family: "lato";
-	font-size: 16px;
-	line-height: 1.6;
+	font-family: "RetroLandMayhem";
 	min-height: 100%;
-	background-color: #424551;
 	overflow: hidden;
 	position: relative;
+	color: #fff;
+	background: url('../img/background1-1.jpg') center/cover no-repeat;
+	padding: 15px;
+	animation: background 35s steps(1) forwards;
 }
 
+.game {}
 
+.game__container {}
+.game__header {}
+.game__main{}
 
-.car {
-	padding: 400px 0px 0px 0px;
-	
+/* =======================menu======================================== */
+.game__menu {
+	max-width: 1720px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 100;
 }
 
-.car__container {
+/* .game__list li:not(:last-child) {
+	margin: 0px 150px 0px 0px;
+} */
+.game__list{
+	display: flex;
+	justify-content: space-between;
+}
+.game__item {
+	font-size: 35px;
+}
+
+/* ============================screen-1============================== */
+
+.screen-1 {
 	position: relative;
 }
 
-
-.car__body {
-	width: 800px;
-	height: 300px;
-	border: 5px solid rgb(22, 22, 22);
+.question {
 	position: absolute;
-	bottom: 0px;
-	left: 200px;
-	border-radius: 300px 50px 5px 5px;
-	overflow: hidden;
-	background-color: #fff;
-	z-index: 10;
-}
-.car__body::after{
-	content: "";
-	display: block;
-	background-color: rgb(22, 22, 22);
-	width: 763px;
-	height: 5px;
-	position: absolute;
-	top: 150px;
-	left: 32px;
-}
-.car__arka-1 {
-	background-color: rgb(22, 22, 22);
-	width: 5px;
-	height: 225px;
-	position: absolute;
-	top: 65px;
-	left: 100px;
-	z-index: 7
+	width: 54px;
+	height: 55px;
+	background: url('../img/que.png') center/cover no-repeat;
+	animation: question 0.5s linear alternate infinite;
 }
 
-.car__arka-2 {
-	background-color: rgb(22, 22, 22);
-	width: 5px;
-	height: 300px;
+.screen-1__question {}
+
+.screen-1__question--1 {
+	top: 445px;
+	left: 540px;
+}
+
+.screen-1__question--2 {
+	top: 445px;
+	left: 766px;
+}
+
+.screen-1__question--3 {
+	top: 445px;
+	left: 874px;
+}
+
+.screen-1__question--4 {
+	top: 275px;
+	left: 820px;
+}
+
+.block {
 	position: absolute;
-	top: -5px;
-	left: 300px;
-	z-index: 7
+	width: 54px;
+	height: 55px;
+	background: url('../img/block.png') center/cover no-repeat;
 }
 
-.car__arka-3 {
-	background-color: rgb(22, 22, 22);
-	width: 5px;
-	height: 300px;
-	position: absolute;
-	top: -5px;
-	left: 550px;
-	z-index: 7;
-}
+.screen-1__block {}
 
-.car__color{
-	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 67%, rgba(252, 176, 69, 1) 100%);
-	width: 800px;
-	height: 150px;
-	position: absolute;
-	top: 150px;
-	left: 0px;
-	z-index: 2;
-}
-.car__rul{
-	border: 5px solid #000;
-	width: 0px;
-	height: 50px;
-	position: absolute;
-	top: 90px;
-	left: 150px;
-	border-radius: 50%;
-	transform: rotate(-20deg);
-	z-index: 1;
-}
-.car__rul::before{
-	content: "";
-	display: block;
-	width: 5px;
-	background-color: #000;
-	height: 100px;
-	transform: rotate(70deg);
-	position: absolute;
-	top: -15px;
-	right: 47px;
-}
-.car__armchair{
-	width: 15px;
-	background-color: #000;
-	height: 60px;
-	position: absolute;
-	top: 85px;
-	left: 250px;
-	border-radius: 4px 4px 0 0 ;
-}
-.car__armchair::before{
-	content: "";
-	display: block;
-	width: 10px;
-	background-color: #000;
-	height: 40px;
-	position: absolute;
-	bottom: 40px;
-	left: 2.48px;
-	border-radius: 5px 5px 0 0;
-}
-  .car__bumper {
-	width: 50px;
-
-	border: 2px solid rgba(177, 177, 177, 0.575);
-	position: absolute;
-	border-radius: 10px;
-	background-color: #000;
-}
-.car__bumper--left {
-	bottom: 10px;
-	left: 190px;
-	z-index: 15;
-	height: 30px;
-}
-
-.car__bumper--right {
-	bottom: 10px;
-	left: 960px;
-	z-index: 15;
-	height: 40px;
-}   
-
-.car__headlamp {
-	width: 80px;
-	height: 70px;
-	border: 2px solid rgba(177, 177, 177, 0.575);
-	position: absolute;
-	border-radius: 50%; 
-	bottom: 20px;
-	left: 195px;
-	z-index: 5;
-	background-color: yellow;
-}
-
-.car__downlamp {
-	width: 50px;
-	height: 80px;
-	border: 2px solid rgba(177, 177, 177, 0.575);
-	position: absolute;
-	border-radius: 0 5px 5px 0;  
-	bottom: 33px;
-	left: 955px;
-	z-index: 5;
-	background-color: red;
-}
-
-.car__pipe{
-	width: 130px;
-	height: 15px;
-	border: 2px solid #c0c0c0;
-	position: absolute;
-	border-radius: 0 10px 10px 0;  
-	bottom: -10px;
-	left: 890px;
-	z-index: 5;
-	background-color: black;
-} 
-.car__antenna{
-	width: 5px;
-	height: 30px;
-	position: absolute;
-	border-radius: 0 10px 10px 0;  
-	bottom: 300px;
-	left: 890px;
-	z-index: 5;
-	background-color: black;
-}
-/* ================windows================================= */
-
-
-.car__window{
-	background-color: rgba(25, 212, 203, 0.315);
-	z-index: 5;
-}
-
-.car__wondow--left {
-	width: 300px;
-	height: 160px;
-	position: absolute;
-	bottom: 140px;
-	left: 0px;
-	border: 5px solid #000;
-}
-
-.car__wondow--right {
-	width: 250px;
-	height: 160px;
-	position: absolute;
-	bottom: 140px;
-	left: 300px;
-	border: 5px solid #000;
-}
-
-.car__wondow--donw {
-	width: 250px;
-	height: 160px;
-	position: absolute;
-	bottom: 140px;
-	left: 550px;
-	border: 5px solid #000;
-}
-
-/* ==============================handle================================= */
-
-
-.car__handle{
-	background-color: rgb(22, 22, 22);
-	border-radius: 5px;
-	width: 30px;
-	height: 5px;
-	position: absolute;
-	bottom: 90px;
-	left: 250px;
-	z-index: 20;
-}
-.car__handle--left {
-	position: absolute;
-	bottom: 90px;
-	left: 250px;
-}
-
-.car__handle--right {
-	position: absolute;
-	bottom: 90px;
-	left: 330px;
-}
-/* ========================wings================================= */
-
-.car__wings {
-	position: relative;
-	z-index: 8;
-}
-
-.car__wing {
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	border: 1px solid rgb(22, 22, 22);
-	border-radius: 50%;
-	background-color: rgb(22, 22, 22);
-}
-.car__wing::before{
-	content: "";
-	display: block;
-	border: 2px solid rgb(212, 208, 208);
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-}
-.car__wing::after{
-	content: "";
-	display: block;
-	border: 2px solid rgb(212, 208, 208);
-	width: 170px;
-	height: 170px;
-	border-radius: 50%;
-	position: relative;
-	bottom: 190px;
-	left: 15px;
-	
-}
-
-.car__wing--left {
-	position: relative;
-	top: 230px;
-	left: 68px;
-}
-
-.car__wing--right {
-	position: relative;
-	top: 30px;
-	left: 518px;
+.screen-1__block--1 {
+	top: 445px;
+	left: 712px;
 }
 
 
-/* ===============================wheels======================================= */
-
-.car__wheel {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	background-color: rgb(22, 22, 22);
-	position: absolute;
-	z-index: 20;
-}
- .car__wheel::before{
-	content: "";
-	display: block;
-	width: 50px;
-	height: 50px;
-	background-color: rgb(212, 208, 208);
-	border-radius: 50%;
-	position: absolute;
-	top: 50px;
-	left: 50px;
-} 
- .car__wheel::after{
-	content: "";
-	display: block;
-	width: 140px;
-	height: 140px;
-	border: 8px solid rgb(212, 208, 208);
-	border-radius: 50%;
-	position: absolute;
-	top: 4px;
-	left: 4.5px;
-} 
-
-.car__wheel--left {
-	position: absolute;
-	top: -50px;
-	left: 300px;
+.screen-1__block--2 {
+	top: 445px;
+	left: 820px;
 }
 
-.car__wheel--right {
-	position: absolute;
-	top: -50px;
-	left: 750px;
-}
-.car__disk{
-	position: absolute;
-	left: 70px;
-	top: 4px;
-	transform: rotate(30deg);
-	width: 10px;
-	height: 135px;
-	background-color: rgb(212, 208, 208);
-}
-.car__disk::after{
-	content: "";
-	display: block;
-	position: absolute;
-	transform: rotate(60deg);
-	top:-2px;
-	width: 10px;
-	height: 140px;
-	background-color: rgb(212, 208, 208);
-}
-.car__disk::before{
-	content: "";
-	display: block;
-	position: absolute;
-	transform: rotate(120deg);
-	top:2px;
-	width: 10px;
-	height: 140px;
-	background-color: rgb(212, 208, 208);
-}
-.car__bolt {
-	background-color:rgb(22, 22, 22);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 5;
-	top:55px;
-	left: 70px;
+.screen-1__block--3 {
+	top: 445px;
+	left: 928px;
 }
 
-.car__bolt-2 {
-	background-color: rgb(22, 22, 22);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 5;
-	top: 65px;
-	left: 57px;
+
+/* ==================================animations====================== */
+/* @keyframes background {
+	14%{
+		background: url('../img/background1-1.jpg') center/cover no-repeat;
+	}
+	28%{
+		background: url('../img/background2-1.jpg') center/cover no-repeat;
+	}
+	42%{
+		background: url('../img/background3-1.jpg') center/cover no-repeat;
+	}
+	56%{
+		background: url('../img/background4-1.jpg') center/cover no-repeat;
+	}
+	70%{
+		background: url('../img/background5-1.jpg') center/cover no-repeat;
+	}
+	84%{
+		background: url('../img/background6-1.jpg') center/cover no-repeat;
+	}
+	100%{
+		background: url('../img/background7-1.jpg') center/cover no-repeat;
+	}
+} */
+
+@keyframes question{
+0%{
+	background: url('../img/que.png') center/cover no-repeat;
 }
-
-.car__bolt-3 {
-	background-color: rgb(22, 22, 22);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 5;
-	top: 81px;
-	left: 60px;
+100%{
+	background: url('../img/que2.png') center/cover no-repeat;
 }
-
-.car__bolt-4 {
-	background-color: rgb(22, 22, 22);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 5;
-	top: 82px;
-	left: 77px;
 }
-
- .car__bolt-5 {
-	background-color: rgb(22, 22, 22);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 5;
-	top: 67px;
-	left: 82px;
-} 
-
-/* ====================================================================== */
