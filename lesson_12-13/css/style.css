@@ -85,7 +85,8 @@
 	display: block;
 	position: absolute;
 	left: 40px;
-	animation: score-1 0.5s steps(1) forwards 5.5s,
+	animation: 	score 0.5s steps(1) forwards 4s,
+					score-1 0.5s linear forwards 5.5s,
 					score-2 0.5s linear forwards 21s,
 					score-3 0.5s linear forwards 23.2s;
 }
@@ -120,8 +121,7 @@
 	top: 640px;
 	left: 960px;
 	 visibility: hidden; 
-	 animation: mario-big 0.3s linear forwards 13.8s,
-					/* mario-big-run 0.5s linear alternate infinite,  */
+	 animation: mario-big 0.5s linear forwards 13.8s,
 					mario-big-run-1 12s  forwards 14s; 
 
 }
@@ -138,6 +138,16 @@
 	animation: duck 0.5s linear alternate infinite,
 					duck-run 4s linear forwards,
 					duck-dead 8s linear forwards; 
+}
+.game__duck--1::before{
+	content: '+100';
+	display: block;
+	font-size: 25px;
+	position: absolute;
+	top: -50px;
+	opacity: 0;
+	visibility: hidden;
+	animation: points 2s linear forwards 4s;
 }
 .game__duck--2{
 	position: absolute;
@@ -565,15 +575,6 @@
 	}
 
 }
-@keyframes mario-big-run{
-	0% {
-			background: url('../img/mario-big.png') center/cover no-repeat;
-		}
-	
-		100% {
-			background: url('../img/mario-big-run.png') center/cover no-repeat;
-		}
-}
 
 @keyframes mario-big-run-1{
 	0%{
@@ -686,7 +687,7 @@
 	}
 	
 }
-@keyframes score-1 {
+@keyframes score {
 	0%{
 		content: '0';
 	}
@@ -696,21 +697,31 @@
 	}
 
 }
-@keyframes score-2 {
+@keyframes score-1 {
 	0%{
 		content: '100';
 	}
 	100%{
+	
 		content: '200';
 	}
 
 }
-@keyframes score-3 {
+@keyframes score-2 {
 	0%{
 		content: '200';
 	}
 	100%{
 		content: '300';
+	}
+
+}
+@keyframes score-3 {
+	0%{
+		content: '300';
+	}
+	100%{
+		content: '400';
 	}
 
 }
@@ -740,4 +751,18 @@
 		content: '3';
 	}
 
+}
+@keyframes points {
+	0%{
+		opacity: 0;
+		visibility: hidden;
+	}
+	20%{
+		opacity: 1;
+		visibility: visible;
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
 }
