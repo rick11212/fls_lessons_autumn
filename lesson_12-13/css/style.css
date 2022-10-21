@@ -12,7 +12,6 @@
 	color: #fff;
 	background: url('../img/background1-1.jpg') center/cover no-repeat;
 	padding: 15px;
-	animation: background 35s steps(1) forwards;
 }
 
 .game {}
@@ -21,8 +20,44 @@
 	position: relative;
 }
 .game__header {}
-.game__main{}
-
+.game__main{
+}
+.game__text{
+	max-width: 700px;
+	font-size: 35px;
+	position: absolute;
+	top: 250px;
+	line-height: 2;
+	left: -100px;
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	animation: text 2s linear forwards 23s;
+	
+	
+}
+.game__repeat{
+	width: 200px;
+	display: block;
+	color: #fff;
+	margin: 0px auto;
+	
+}
+.game__repeat:hover::after{
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+}
+.game__repeat::after{
+	content: "";
+	display: block;
+	width: 0%;
+	height: 1px;
+	border: 1px solid #fff;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
 /* =======================menu======================================== */
 .game__menu {
 	max-width: 1720px;
@@ -47,50 +82,66 @@
  .game__mario{
 	width: 50px;
 	height: 58px;
-	position: relative;
+	position: absolute;
 	background: url('../img/mario.png') center/cover no-repeat;
-	top: 630px;
-	right: 275px;
-	animation: mario-run 0.3s linear alternate 34,mario-run-1 10s linear forwards, mario-hidden linear forwards 13.6s; 
+	top: 695px;
+	right: 1430px;
+	 animation: mario-run 0.3s linear alternate 34,mario-run-1 10s linear forwards, mario-hidden linear forwards 13.6s;  
 	
 } 
 .game__mario-big{
 	width: 55px;
 	height: 112px;
-	position: relative;
-	background: url('../img/mario-big.png') center/cover no-repeat;
-	top: 460px;
+	position: absolute;
+	background: url('../img/mario-big-right.png') center/cover no-repeat;
+	top: 640px;
 	left: 960px;
-	visibility: hidden;
-	animation: mario-big 0.3s linear forwards 13.8s, ario-big-run 5s linear forwards;
+	 visibility: hidden; 
+	 animation: mario-big 0.3s linear forwards 13.8s,
+					/* mario-big-run 0.5s linear alternate infinite,  */
+					mario-big-run-1 12s  forwards 14s; 
 
 }
 .game__duck{
 	width: 50px;
 	height: 58px;
-	position: relative;
+	position: absolute;
 	color: #fff;
 	background: url('../img/duck.png') center/cover no-repeat;
-	top: 570px;
-	left: 850px;
-	animation: duck 0.5s linear alternate infinite,duck-run 4s linear forwards,duck-dead 8s linear forwards;
+	top: 695px;
+	left: 840px;
+	animation: duck 0.5s linear alternate infinite,
+					duck-run 4s linear forwards,
+					duck-dead 8s linear forwards; 
 } 
 .game__coin{
 	width: 22px;
 	height: 42px;
 	background: url('../img/coin.png') center/cover no-repeat;
 	position: absolute;
+	 visibility: hidden; 
+}
+.game__coin--1{
 	top: 470px;
 	left: 555px;
-	visibility: hidden;
 	animation: coin 2s linear forwards 5.5s;
+}
+.game__coin--2{
+	top: 470px;
+	left: 890px;
+	animation: coin 2s linear forwards 20s;
+}
+.game__coin--3{
+	top: 275px;
+	left: 835px;
+	animation: coin 2s linear forwards 24.5s;
 }
 .game__mushrum{
 	width: 42px;
 	height: 42px;
 	background: url('../img/mush.png') center/cover no-repeat;
 	position: absolute;
-	top: 470px;
+	top: 475px;
 	left: 771px;
 	visibility: hidden;
 	animation: mush 5s linear 8.5s;
@@ -126,12 +177,13 @@
 .screen-1__question--3 {
 	top: 445px;
 	left: 874px;
-	animation: question 0.5s linear alternate infinite, que-coin 0.5s linear forwards 15s;
+	animation: question 0.5s linear alternate infinite, que-coin 0.5s linear forwards 20s;
 }
 
 .screen-1__question--4 {
-	top: 275px;
+	top: 250px;
 	left: 820px;
+	animation: question 0.5s linear alternate infinite, que-coin 0.5s linear forwards 24.5s;
 }
 
 .block {
@@ -141,68 +193,112 @@
 	background: url('../img/block.png') center/cover no-repeat;
 }
 
-.game__peaces {}
-
-.game__peace {
-	position: absolute;
-	width: 26px;
-	height: 27px;
-	background: url('../img/peace.png') center/cover no-repeat;
-}
-
-.game__peace--1 {}
-
-.game__peace--2 {}
-
-.game__peace--3 {}
-
-.game__peace--4 {}
-
-
 .screen-1__block {}
 
 .screen-1__block--1 {
 	top: 445px;
 	left: 712px;
-	animation:block-1 0.5s linear forwards 7s;
+	animation:block-1 0.5s linear forwards 7s,block-hidden 0.5s ease alternate forwards 1 19s;
 }
 
 
 .screen-1__block--2 {
 	top: 445px;
 	left: 820px;
+	animation: block-hidden 0.5s ease alternate forwards 1 16.8s;
 }
 
 .screen-1__block--3 {
 	top: 445px;
 	left: 928px;
+	animation: block-hidden 0.5s ease alternate forwards 1 15s ;
+}
+.game__peaces {
+
 }
 
+.game__peace {
+	position: absolute;
+	width: 26px;
+	height: 27px;
+	background: url('../img/peace.png') center/cover no-repeat;
+	opacity: 0;
+	visibility: hidden;  
+}
+
+.game__peace--1 {
+	top: 500px;
+	left: 960px;
+	animation: peaces 1s ease alternate forwards 1 15s ;
+}
+
+.game__peace--2 {
+	top: 550px;
+	left: 960px;
+	animation: peaces 1s ease alternate forwards 1 15s;
+}
+
+.game__peace--3 {
+	top: 500px;
+	left: 930px;
+	animation: peaces-2 1s ease alternate forwards 1 15s;
+}
+
+.game__peace--4 {
+	top: 550px;
+	left: 930px;
+	animation: peaces-2 1s ease alternate forwards 1 15s;
+}
+
+.game__peace--5 {
+	top: 500px;
+	left: 850px;
+	animation: peaces 1s ease alternate forwards 1 16.8s;
+}
+
+.game__peace--6 {
+	top: 550px;
+	left: 850px;
+	animation: peaces 1s ease alternate forwards 1 16.8s;
+}
+
+.game__peace--7 {
+	top: 500px;
+	left: 820px;
+	animation: peaces-2 1s ease alternate forwards 1 16.58s;
+}
+
+.game__peace--8 {
+	top: 550px;
+	left: 820px;
+	animation: peaces-2 1s ease alternate forwards 1 16.8s;
+}
+
+.game__peace--9 {
+	top: 500px;
+	left: 740px;
+	animation: peaces 1s ease alternate forwards 1 19s;
+}
+
+.game__peace--10 {
+	top: 550px;
+	left: 740px;
+	animation: peaces 1s ease alternate forwards 1 19s;
+}
+
+.game__peace--11 {
+	top: 500px;
+	left: 710px;
+	animation: peaces-2 1s ease alternate forwards 1 19s;
+}
+
+.game__peace--12 {
+	top: 550px;
+	left: 710px;
+	animation: peaces-2 1s ease alternate forwards 1 19s;
+}
 
 /* ==================================animations====================== */
-/* @keyframes background {
-	14%{
-		background: url('../img/background1-1.jpg') center/cover no-repeat;
-	}
-	28%{
-		background: url('../img/background2-1.jpg') center/cover no-repeat;
-	}
-	42%{
-		background: url('../img/background3-1.jpg') center/cover no-repeat;
-	}
-	56%{
-		background: url('../img/background4-1.jpg') center/cover no-repeat;
-	}
-	70%{
-		background: url('../img/background5-1.jpg') center/cover no-repeat;
-	}
-	84%{
-		background: url('../img/background6-1.jpg') center/cover no-repeat;
-	}
-	100%{
-		background: url('../img/background7-1.jpg') center/cover no-repeat;
-	}
-} */
 
 @keyframes question{
 0%{
@@ -278,7 +374,7 @@
 	55%{
 		transform: translate(800px, -130px);
 	}
-	60%{
+	58%{
 		transform: translate(800px, 0px);
 	}
 	65%{
@@ -328,6 +424,64 @@
 	}
 
 }
+@keyframes block-hidden {
+	0% {
+		overflow: visible;
+		opacity: 1;
+	}
+
+	100% {
+		overflow: hidden;
+		opacity: 0;
+	}
+
+}
+
+@keyframes peaces{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0px, 0px);
+	}
+	50%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(20px,-20px);
+	}
+	80%{
+		opacity: 0;
+		visibility: visible;
+		transform: translate(20px,-20px);
+	}
+	80%{
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(20px,30px);
+	}
+}
+@keyframes peaces-2{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0px, 0px);
+	}
+	50%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-20px,-20px);
+	}
+	80%{
+		opacity: 0;
+		visibility: visible;
+		transform: translate(-20px,-20px);
+	}
+	80%{
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-20px,30px);
+	}
+}
+
 @keyframes coin{
 	0%{
 		visibility: visible;
@@ -354,14 +508,14 @@
 		transform: translateX(200px);
 	}
 	50%{
-		transform: translate(300px, 245px);
+		transform: translate(300px, 235px);
 	}
 	75%{
-		transform: translate(450px, 245px);
+		transform: translate(450px, 235px);
 	}
 	100%{
 		visibility: hidden;
-		transform: translate(200px, 245px);
+		transform: translate(200px, 235px);
 	}
 }
 @keyframes mario-big{
@@ -373,20 +527,169 @@
 	visibility: visible;
 	transform: scale(1);
 	}
-	30%{
-	visibility: visible;
-	transform: scaleX(-1);
-	}
 	100%{
 	visibility: visible;
-	transform: translate(-40px, -80px);
+	transform:scale(1);
+	}
+
+}
+@keyframes mario-big-run{
+	0% {
+			background: url('../img/mario-big.png') center/cover no-repeat;
+		}
+	
+		100% {
+			background: url('../img/mario-big-run.png') center/cover no-repeat;
+		}
+}
+
+@keyframes mario-big-run-1{
+	0%{
+		visibility: visible;
+		transform: translateX(0px);
+	}
+	5%{
+	visibility: visible;
+	transform: translateX(-20px);	
+	background: url('../img/mario-big-left.png') center/cover no-repeat;
+	}
+	10%{
+	visibility: visible;
+	transform: translate(-20px,-80px);	
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+	13%{
+	visibility: visible;
+	transform:  translate(-20px);
+	background: url('../img/mario-big-left.png') center/cover no-repeat;
+	}
+	/* 16%{
+	visibility: visible;
+	transform:  translateX(-40px);
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	}
+	17%{
+	visibility: visible;
+	transform:  translateX(-60px);
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	}
+	18%{
+	visibility: visible;
+	transform:  translateX(-90px);
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	}
+	19%{
+	visibility: visible;
+	transform:  translateX(-110px);
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	} */
+	20%{
+	visibility: visible;
+	transform: translateX(-135px);	
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	}
+	25%{
+	visibility: visible;
+	transform:  translate(-135px,-80px);
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+	28%{
+	visibility: visible;
+	transform: translate(-135px);
+	background: url('../img/mario-big-left.png') center/cover no-repeat;
+	}
+	35%{
+	visibility: visible;
+	transform:  translateX(-255px);	
+	background: url('../img/mario-big-run-left.png') center/cover no-repeat;
+	}
+	45%{
+	visibility: visible;
+	transform:  translate(-255px,-80px);
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+	48%{
+	visibility: visible;
+	transform: translate(-255px);
+	background: url('../img/mario-big-right.png') center/cover no-repeat;
+	}
+	/* 46%{
+	visibility: visible;
+	transform: translate(-220px);
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	}
+	47%{
+	visibility: visible;
+	transform: translate(-190px);
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	}
+	48%{
+	visibility: visible;
+	transform: translate(-160px);
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	}
+	49%{
+	visibility: visible;
+	transform: translate(-130px);
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	} */
+	60%{
+	visibility: visible;
+	transform:  translateX(-80px);	
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	}
+	65%{
+	visibility: visible;
+	transform: translate(-80px,-80px);
+	background: url('../img/mario-big-jump-right.png') center/cover no-repeat;
+	}
+	68%{
+	visibility: visible;
+	transform: translate(-80px);
+	background: url('../img/mario-big-run-right.png') center/cover no-repeat;
+	}
+	73%{
+	visibility: visible;
+	transform: translateX(-10px);	
+	background: url('../img/mario-big-right.png') center/cover no-repeat;
+	}
+	78%{
+	visibility: visible;
+	transform: translate(-80px,-235px);
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+
+	83%{
+	visibility: visible;
+	transform: translate(-140px,-270px);
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+	88%{
+	visibility: visible;
+	transform: translate(-80px,-235px);
+	background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
+	}
+	
+	93%{
+	visibility: visible;
+	transform: translate(-140px,-430px);
+	background: url('../img/mario-big-left.png') center/cover no-repeat;
+	}
+	100%{
+		visibility: visible;
+		transform: translate(-140px,-500px);
+		background: url('../img/mario-big-jump-left.png') center/cover no-repeat;
 	}
 }
-@keyframes mario-big-run {
+
+@keyframes text {
 	0%{
-		transform: translate(-60px, 0px);
+		opacity: 0;
+		visibility: hidden;
 	}
-	100% {
-			transform: translate(0px, -80px);
-		}
+	100%{
+		opacity: 1;
+		visibility: visible;
+	}
+	
 }
