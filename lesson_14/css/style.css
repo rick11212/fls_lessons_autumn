@@ -1,0 +1,161 @@
+
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0px auto;
+	
+}
+.wrapper{	
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.wrapper > main{
+	flex: 1 0 auto;
+}
+
+/* =============================================================================================== */
+
+.header { 
+	padding: 30px 0px ;
+	margin: 0px 0px 50px 0px;
+	background-color: #f1f1f1;
+	
+}
+
+.header__menu {}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu__icon a{
+	font-size: 30px;
+	color: red;
+}
+.button{
+font-size: 20px;
+border: 1px solid #000;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: red;
+padding: 10px 10px;
+}
+.card__button{
+	
+}
+.menu__body {
+	flex: 0 1 800px;
+}
+
+.menu__list {
+	flex: 0 1 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.menu__item {
+	font-size: 20px;
+}
+.menu__item:nth-child(1){
+	order: 2;
+}
+.menu__item:nth-child(2){
+	order: 1;
+}
+.menu__item:nth-child(3){
+	order: 4;
+}
+.menu__item:nth-child(4){
+	order: 3;
+}
+.menu__link {
+	color: #222;
+}
+
+/* ==================================================================================== */
+
+.main {
+	margin: 0px 0px 50px 0px;
+}
+
+.main__container {}
+
+.main__card {}
+
+.card {}
+
+.card__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+	row-gap: 20px;
+}
+
+.card__column {
+	flex: 0 1 33.333%;
+	padding: 0px 15px;
+	display: flex;
+}
+
+.card__body {
+	border: 1px solid #000;
+	display: flex;
+	padding: 10px 10px;
+}
+.card__text {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.card__photo {
+	flex: 0 0 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	margin: 0px 10px 0px 0px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+
+
+.card__title {
+	font-size: 20px;
+	font-weight: 700;
+	
+}
+.card__main-text{
+	font-size: 16px;
+	flex:  1 0 auto;
+}
+
+.card__button{
+	width: 100px;
+	margin: 0px 0px 0px auto;
+}
+
+
+/* ============================================================================================== */
+
+
+
+
+.footer {
+	background-color: #010101;
+}
+
+.footer__container {}
+
+.footer__text {
+	padding: 50px 0px;
+	color: #f1f1f1;
+}
