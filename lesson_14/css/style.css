@@ -13,8 +13,10 @@
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+
 .wrapper > main{
 	flex: 1 0 auto;
+	
 }
 
 /* =============================================================================================== */
@@ -95,7 +97,7 @@ padding: 10px 10px;
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0px -15px;
-	row-gap: 20px;
+	row-gap: 30px;
 }
 
 .card__column {
