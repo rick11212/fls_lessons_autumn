@@ -72,7 +72,7 @@ flex: 1 1 100%;
 	row-gap: 10px;
 	align-items: center;
 	flex-wrap: wrap;
-	flex: 1 1 838px;
+	flex: 1 1 68.5%;
 }
 
 .menu__button {
@@ -388,3 +388,137 @@ label{
 }
 
 .button {}
+
+/* ============================footer====================================== */
+
+.footer {
+	background: #1E212C;
+	padding: 0px 15px;
+}
+
+.footer__container {
+	padding: 80px 0px 0px 0px;
+}
+
+.footer__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px 0px 60px 0px;
+}
+
+.footer__columns {
+	margin: 0px -40px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer__column {
+	flex-grow: 0;
+	padding: 0px 40px;
+}
+.footer__column:nth-child(1){
+	max-width: 370px;
+}
+.footer__column:nth-child(2){
+	max-width: 170px;
+}
+.footer__column:nth-child(3){
+	max-width: 160px;
+}
+.footer__column:nth-child(4){
+	max-width: 200px;
+}
+.footer__column:nth-child(5){
+	max-width: 375px;
+}
+
+.footer__logo {
+	margin: 0px 0px 24px 0px;
+}
+
+.footer__text {
+	font-size: 12px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.6);
+	margin: 0px 0px 38px 0px;
+}
+
+.footer__follow > .follow__icons {
+	gap: 20px;
+}
+
+.footer__title {
+	font-weight: 700;
+	line-height: 1.5;
+	display: flex;
+	align-items: center;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin: 0px 0px 12px 0px;
+}
+
+.footer__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	flex-wrap: wrap;
+}
+
+.footer__item {
+	max-width: 100%;
+	flex-wrap: wrap;
+}
+
+.footer__link {
+	color: rgba(255, 255, 255, 0.6);
+}
+.footer__link:hover {
+	color: #FF3F3A;
+	transition: all 0.3s ease 0s;
+}
+
+.footer__form {
+	position: relative;
+}
+.footer__form > .input {
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	max-height: 36px;
+	position: relative;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 16px;
+	margin: 0px 0px 12px 0px;
+}
+.footer__form > .input::placeholder{
+	font-size: 12px;
+}
+.footer__form > .input:focus{
+	box-shadow: 10px 11px 45px 5px rgba(238, 235, 234, 0.15);
+}
+.footer__form > .input:focus + .footer__button{
+	outline: 1px solid #FF3F3A;
+	border-radius: 4px;
+}
+
+.footer__button {
+	position: absolute;
+	top: 12px;
+	left: 270px;
+	background: transparent;
+}
+
+.footer__button::after {
+	content: '';
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url('../img/icons/arrow.svg') center/12px no-repeat;
+}
+
+/* =======================================homework=============================== */
+
+.homework__label{
+text-align: center;
+}
