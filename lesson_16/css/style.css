@@ -519,6 +519,128 @@ label{
 
 /* =======================================homework=============================== */
 
+.main__homework {}
+
+.homework {}
+
+.homework__title {
+	text-align: center;
+	margin: 0px 0px 50px 0px;
+}
+.radio__title {
+	text-align: center;
+	margin: 0px 0px 50px 0px;
+}
+
+.homework__form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.homework__check{
+	display: inline-block;
+}
+.homework__input:checked + .homework__label::after{
+
+	background-color: #424551;
+	transform: translate(40px,0);
+	transition: all 0.3s ease 0s;
+}
+.homework__input:checked + .homework__label::before{
+	background-color: rgba(66, 69, 81, 0.6);
+}
 .homework__label{
-text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+.homework__label::after{
+	content: '';
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #424551;
+	transition: all 0.3s ease 0s;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(66, 69, 81, 0.3);
+}
+.homework__label::before {
+	content: '';
+	display: block;
+	width: 80px;
+	height: 40px;
+	border: 1px solid #424551;
+	border-radius: 40px;
+	background-color: rgba(66, 69, 81, 0.2);
+}
+
+.homework__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+
+.homework__radio {
+}
+
+.radio {}
+
+.radio__body {
+}
+
+.radio__label {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	
+}
+.radio__label:after{
+	content: '';
+	display: inline-block;
+	width: 39px;
+	height: 39px;	
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+}
+.radio__body:nth-child(2) > .radio__label::after{
+	background: url('../img/icons/audi.svg') 0 0/cover no-repeat;
+	margin: 0px 0px 0px 86.5px;
+}
+.radio__body:nth-child(3) > .radio__label::after{
+	background: url('../img/icons/mers.png') 0 0/cover no-repeat;
+	margin: 0px 0px 0px 10px;
+}
+.radio__body:nth-child(4) > .radio__label::after{
+	background: url('../img/icons/bmw.svg') 0 0/cover no-repeat;
+	margin: 0px 0px 0px 77px;
+}
+.radio__body:nth-child(5) > .radio__label::after{
+	background: url('../img/icons/vw.svg') 0 0/cover no-repeat;
+	margin: 0px 0px 0px 35px;
+}
+.radio__input:checked + .radio__label::after{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.3s ease 0s;
+}
+.radio__input:focus + .radio__label span,
+.radio__input:hover +.radio__label span{
+	border-bottom: 1px solid #000;
+}
+.radio__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.homework__form > .button{
+	align-self: flex-start;
+}
+.homework__sel{
+	align-self: flex-start;
 }

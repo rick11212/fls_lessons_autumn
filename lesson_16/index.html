@@ -126,15 +126,51 @@
 						</div>
 					</div>
 					<div class="main__homework homework">
-						<div class="homework__label label">
+						<div class="homework__title label">
 							<div class="label__title">Homework</div>
 						</div>
-						<form action="" method="post" class="homework__form">
+						<form action="https://jsonplaceholder.typicode.com/posts" method="post" class="homework__form">
 							<div class="homework__check">
-								<label for="homework-check">Lorem ipsum dolor sit </label>
-								<input id="homework-check" type="checkbox" name="homework-check" class="homework__input">
+								<div class="homework__title label">
+									<div class="label__subtitle">checkbox</div>
+								</div>
+								<input id="homework-check" type="checkbox" name="theme" class="homework__input" value="dark">
+								<label for="homework-check" class="homework__label"></label>
 							</div>
-							<div class="homework__radio"></div>
+							<div class="homework__radio radio">
+								<div class="radio__title label">
+									<div class="label__subtitle">radio</div>
+								</div>
+								<div class="radio__body">
+									<input id="car-1" type="radio" name="car" value="Audi" class="radio__input">
+									<label for="car-1" class="radio__label"><span> Audi</span></label>
+								</div>
+								<div class="radio__body">
+									<input id="car-2" type="radio" name="car" value="Mercedes-benz"
+										class="radio__input">
+									<label for="car-2" class="radio__label"><span>Mercedes-benz</span></label>
+								</div>
+								<div class="radio__body">
+									<input id="car-3" type="radio" name="car" value="BMW" class="radio__input">
+									<label for="car-3" class="radio__label"><span>BMW</span></label>
+								</div>
+								<div class="radio__body">
+									<input id="car-4" type="radio" name="car" value="Volkswagen" class="radio__input">
+									<label for="car-4" class="radio__label"><span>Volkswagen</spa></label>
+								</div>
+							</div>
+							<div class="homework__sel">
+								<div class="homework__title label">
+									<div class="label__subtitle">select</div>
+								</div>
+								<select name="sel-car" class="sel">
+									<option value="Audi" selected>Audi</option>
+									<option value="Mercedes-benz">Mercedes-benz</option>
+									<option value="BMW">BMW</option>
+									<option value="Volkswagen">Volkswagen</option>
+								</select>
+							</div>
+							<button type="submit" class="homework__button button">Send</button>
 						</form>
 					</div>
 				</div>
