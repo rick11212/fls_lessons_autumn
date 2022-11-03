@@ -638,6 +638,11 @@ label{
 	height: 0;
 	opacity: 0;
 }
+.homework__buttons{
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
 .homework__form > .button{
 	align-self: flex-start;
 }
