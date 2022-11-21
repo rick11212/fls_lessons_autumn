@@ -134,6 +134,10 @@ flex-grow: 1;
 	.button {
 	padding: 10px 20px;
 	}
+	.button:hover {
+	padding: 10px 20px;
+	}
+	
 	.menu{
 		gap: 40px;
 	}
@@ -287,6 +291,9 @@ flex:1 1 55%;
 	color: #787A80;
 	position: relative;
 	padding: 0px 0px 0px 36px;
+}
+.contacts__title a{
+	color: #1E212C;
 }
 .contacts__icon{
 	width: 24px;
@@ -477,14 +484,15 @@ label{
 	height: 20px;
 	border-radius: 5px;
 	border: 1px solid rgb(255, 72, 0);
-	top: -2px;
-	left: -36px;
+	top: 2px;
+	left: 0px;
 	cursor: pointer;
 }
 .main__check label{
 	position: relative;
-	left: 36px;
+	padding-left: 36px;
 	cursor: pointer;
+	display: block;
 }
 .check:checked + label::before{
 	background: url('../img/icons/check.svg') center/15px no-repeat,rgb(255, 72, 0);
@@ -505,10 +513,23 @@ label{
 
 .button {}
 
+@media (max-width:1086px){
+	.main__agree {
+	gap: 20px;
+}
+}
 @media (max-width:767.98px){
 	.main__button {
 		max-width: 150px;
 		}
+}
+@media (max-width:480px){
+	.main__agree{
+		flex-direction: column;
+	}
+	.main__agree .main__button{
+		flex: 0 1 100%;
+	}
 }
 /* ============================footer====================================== */
 
