@@ -189,9 +189,7 @@ flex-grow: 1;
 		top: 50%;
 		transform: translate(0px,-50%);
 	}
-	.menu__buttons {
-		display: none;
-	}
+	
  }
 
 /* ===================================main========================================= */

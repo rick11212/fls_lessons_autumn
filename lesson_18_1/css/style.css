@@ -1,0 +1,40 @@
+
+[class*="__container"] {
+	max-width: 1260px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.wrapper{	
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.wrapper > main{
+	flex: 1 0 auto;
+}
+
+body {
+	font-family: 'Lato';
+	line-height: 1.6;
+}
+/* =============================================================================================== */
+.grid-container {
+	background: cadetblue;
+	border: 1px solid #000;
+	display: grid;
+	grid-template: 100px 50px/ 20% 30%;
+	gap: 20px;
+	grid-auto-flow: column;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.grig-element {
+	background: cornflowerblue;
+	border: 1px solid #000;
+}
